@@ -43,8 +43,6 @@ class ProductController {
       const { id } = req.params;
       const { ProductName, ProductCategory, ProductPrice, ProductDescription } =
         req.body;
-      // console.log(id);
-      // console.log(req.body);
       const UpdatedData = await ProductModel.findByIdAndUpdate(
         { _id: id },
         {
